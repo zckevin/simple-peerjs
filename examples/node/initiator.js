@@ -7,7 +7,7 @@ const SimplePeerJs = require('../../src');
 async function main() {
   const peerId = process.argv[2];
   if (!peerId) {
-    consoele.log('Please pass the peerId');
+    console.log('Please pass the peerId');
     process.exit(-1);
   }
   const connectionManager = new SimplePeerJs({ fetch, WebSocket, wrtc });
