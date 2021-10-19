@@ -115,7 +115,11 @@ class Socket extends EventEmitter {
       return;
     }
 
-    if (!this._wsOpen()) return;
+    // zc: stash instead of discard, in case ws conn is slower than webrtc offer
+    if (!this._wsOpen()) {
+      this._messagesQueue.push(data);
+      return;
+    };
 
     const message = JSON.stringify(data);
 
