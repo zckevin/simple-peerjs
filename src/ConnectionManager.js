@@ -78,6 +78,13 @@ class ConnectionManager extends EventEmitter {
       if (conn.reject) conn.reject(error);
     });
 
+    conn.peer.on("close", () => {
+      connected = false;
+      conn.peer.destroy()
+      conn.peer = null;
+      delete this.connections[id]
+    })
+
     return conn;
   }
 
