@@ -6,7 +6,7 @@ class Socket extends EventEmitter {
     super();
     this._disconnected = true;
     this._messagesQueue = [];
-    this.pingInterval = opts.pingInterval;
+    this.pingInterval = opts.pingInterval || 10000;
     const wsProtocol = opts.secure ? 'wss://' : 'ws://';
     this._baseUrl =
       wsProtocol +
