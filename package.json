@@ -1,9 +1,9 @@
 {
-  "name": "simple-peerjs",
+  "name": "@zckevin/simple-peerjs",
   "version": "1.0.1",
   "description": "Simple peer-to-peer with WebRTC (peerjs singal exchange with simple-peer library)",
   "main": "src/index.js",
-  "repository": "https://github.com/nickcis/simple-peerjs",
+  "repository": "https://github.com/zckevin/simple-peerjs",
   "author": "Nicolas Cisco",
   "license": "MIT",
   "scripts": {
